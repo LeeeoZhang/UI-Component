@@ -1,0 +1,72 @@
+/*------水晶button*/
+.btn {
+    padding: .3em .8em;
+    border: 1px solid #446d88;
+    background: #58a linear-gradient(hsla(0,0%,100%,.2),
+                                    transparent);
+    border-radius: .2em;
+    box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+    color: white;
+    text-shadow: 0 -.05em .05em rgba(0,0,0,.5);
+    font-size: 125%;
+    line-height: 1.5;
+}
+
+.btn.ok {
+    background-color: #6b0;
+}
+
+.btn.cancel {
+    background-color: #c00;
+}
+
+/*elebuttom*/
+.elebuttom {
+    box-sizing: border-box;
+    line-height: 1;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #bfcbd9
+}
+.elebuttom.warning {
+    background: #ff4949;
+    border-color: #ff4949;
+}
+.elebuttom.warning:hover,
+.elebuttom.warning:focus {
+    background: #ff6d6d;
+    border-color: #ff6d6d;
+}
+.elebuttom.warning:active{
+    background: #e64242;
+    border-color: #e64242;
+}
+.elebuttom.ok {
+    background: #13ce66;
+    border-color: #13ce66;
+}
+.elebuttom.ok:hover,
+.elebuttom.ok:focus {
+    background: #42d885;
+    border-color: #42d885;
+}
+.elebuttom.ok:active{
+    background: #11b95c;
+    border-color: #11b95c;
+}
+.elebuttom.cancel {
+    background: #50bfff;
+    border-color: #50bfff;
+}
+.elebuttom.cancel:hover,
+.elebuttom.cancel:focus {
+    background: #73ccff;
+    border-color: #73ccff;
+}
+.elebuttom.cancel:active{
+    background: #48ace6;
+    border-color: #48ace6;
+}
