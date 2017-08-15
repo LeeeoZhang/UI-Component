@@ -171,10 +171,10 @@ button {
 .cube {
     width: 300px;
     height: 300px;
-    margin: 30px 0 10px 50px;
+    margin: 30px auto 10px auto;
     position:relative;
     transform-style:preserve-3d;
-    animation: rotate 10s infinite;
+    animation: rotate 5s infinite;
 }
 .cube>.side {
     position:absolute;
@@ -223,4 +223,40 @@ button {
     to {
         transform: rotateX(360deg) rotateY(360deg);
     }
+}
+
+/*面包屑导航*/
+.bread {
+    margin: 30px 0 0 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+}
+.bread a {
+    display: block;
+    background: #F5F5F5;
+    padding: .3em 1em;
+    color: #666;
+    text-decoration: none;
+    position: relative;
+}
+.bread a:after {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -1em;
+    border-top: 1.5em solid transparent;
+    border-bottom: 1.5em solid transparent;
+    border-left: 1em solid #F5F5F5;
+}
+.bread li {
+    margin-right: 1.5em;
+}
+.bread a:hover {
+    background: #BDBDBD;
+}
+.bread a:hover:after {
+    border-left-color: #BDBDBD;
 }
