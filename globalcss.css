@@ -1,3 +1,10 @@
+/*reset*/
+button {
+    outline:none
+}
+
+
+
 /*------水晶button*/
 .btn {
     padding: .3em .8em;
@@ -69,4 +76,151 @@
 .elebuttom.cancel:active{
     background: #48ace6;
     border-color: #48ace6;
+}
+
+/*tooltips*/
+#tooltips {
+    margin-top: 50px;
+}
+.tooltips {
+    position: relative;
+}
+.tooltips:before {
+    position: absolute;
+    content: '';
+    border: 5px solid transparent;
+}
+.tooltips:after {
+    font-size: 14px;
+    line-height: 1;
+    position: absolute;
+    padding: 10px 15px;
+    /*注意content属性！*/
+    content: attr(data-tooltip);
+    white-space: nowrap;
+    color: #fff;
+    border-radius: 4px;
+    background: #383838;
+}
+.tooltips:before,
+.tooltips:after {
+    z-index: 20;
+    visibility: hidden;
+    transition: all.3s ease;
+    transition-delay: 0ms;
+    pointer-events: none;
+    opacity: 0;
+}
+.tooltips:hover:before,
+.tooltips:hover:after {
+    visibility: visible;
+    opacity: 1;
+}
+.tooltips.top:before {
+    border-top: 5px solid #383838;
+    left: 50%;
+    top: -30%;
+    transform: translateX(-50%);
+}
+.tooltips.top:after {
+    left: 0px;
+    top: -130%;
+}
+.tooltips.down:before {
+    border-bottom: 5px solid #383838;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+}
+.tooltips.down:after {
+    left: 0px;
+    top: 130%;
+}
+.tooltips.right:before {
+    border-right: 5px solid #383838;
+    left: 104%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.tooltips.right:after {
+    left: 115%;
+    top: 0;
+}
+/*[data-direction='down']:before {
+    top: -webkit-calc(100% - 5px);
+    top:    -moz-calc(100% - 5px);
+    top:         calc(100% - 5px);
+
+    border-bottom-color: #383838;
+}
+[data-direction='down']:after {
+    top: -webkit-calc(100% + 5px);
+    top:    -moz-calc(100% + 5px);
+    top:         calc(100% + 5px);
+}
+[data-direction='down']:before,
+[data-direction='down']:after {
+    left: 50%;
+    -webkit-transform: translate3d(-50%,0,0);
+    -moz-transform: translate3d(-50%,0,0);
+    transform: translate3d(-50%,0,0);
+}*/
+
+/*3Dcube*/
+
+.cube {
+    width: 300px;
+    height: 300px;
+    margin: 30px 0 10px 50px;
+    position:relative;
+    transform-style:preserve-3d;
+    animation: rotate 10s infinite;
+}
+.cube>.side {
+    position:absolute;
+    top:0;
+    left:0;
+    width:300px;
+    height:300px;
+    background: #aaa;
+    font-size:60px;
+    text-align:center;
+    line-height:300px;
+    font-weight:bold;
+    color:#000;
+    border:1px solid #000;
+    transition:all .3s;
+    opacity: .5;
+}
+.cube>.side.front {
+    transform:rotateY(0) translateZ(150px);
+    background: red;
+}
+.cube>.side.back {
+    transform: rotateY(0) translateZ(-150px);
+    background: blue;
+}
+.cube>.side.left {
+    transform: rotateY(-90deg) translateZ(150px);
+    background: orange;
+}
+.cube>.side.right {
+    transform: rotateY(90deg) translateZ(150px);
+    background: pink;
+}
+.cube>.side.top {
+    transform: rotateX(90deg) translateZ(150px);
+    background: yellow;
+}
+.cube>.side.bottom {
+    transform: rotateX(90deg) translateZ(-150px);
+    background: green;
+}
+@keyframes rotate {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
 }
