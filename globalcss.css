@@ -260,3 +260,217 @@ button {
 .bread a:hover:after {
     border-left-color: #BDBDBD;
 }
+
+/*loading common*/
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+}
+.loader.circle1 span,
+.loader.circle2 span {
+    position: absolute;
+    display: inline-block;
+    width: 1.5rem;
+    height: .5rem;
+    background: #11b95c;
+}
+/*loading circle1*/
+.loader.circle1 span:nth-child(1) {
+    left: 0;
+    top: 50%;
+    margin-top: -.25rem;
+    animation-delay: .13s
+}
+.loader.circle1 span:nth-child(2) {
+    top: 1rem;
+    left: .5rem;
+    transform: rotate(45deg);
+    animation-delay: .26s
+}
+.loader.circle1 span:nth-child(3) {
+    top: .5rem;
+    left: 50%;
+    margin-left: -.75rem;
+    transform: rotate(90deg);
+    animation-delay: .39s
+}
+.loader.circle1 span:nth-child(4) {
+    top: 1rem;
+    right: .5rem;
+    transform: rotate(-45deg);
+    animation-delay: .52s
+}
+.loader.circle1 span:nth-child(5) {
+    top: 50%;
+    right: 0;
+    margin-top: -.25rem;
+    animation-delay: .65s
+}
+.loader.circle1 span:nth-child(6) {
+    bottom: 1rem;
+    right: .5rem;
+    transform: rotate(45deg);
+    animation-delay: .78s
+}
+.loader.circle1 span:nth-child(7) {
+    bottom: .5rem;
+    left: 50%;
+    margin-left: -.75rem;
+    transform: rotate(90deg);
+    animation-delay: .91s
+}
+.loader.circle1 span:nth-child(8) {
+    bottom: 1rem;
+    left: .5rem;
+    transform: rotate(-45deg);
+    animation-delay: 1.04s
+}
+.loader.circle1 span {
+    animation: circle1 1s ease infinite;
+}
+@keyframes circle1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/*loading circle2*/
+.loader.circle2 span:nth-child(1) {
+    left: 0;
+    top: 50%;
+    margin-top: -.25rem;
+}
+.loader.circle2 span:nth-child(2) {
+    top: 1rem;
+    left: .5rem;
+    transform: rotate(45deg);
+}
+.loader.circle2 span:nth-child(3) {
+    top: .5rem;
+    left: 50%;
+    margin-left: -.75rem;
+    transform: rotate(90deg);
+}
+.loader.circle2 span:nth-child(4) {
+    top: 1rem;
+    right: .5rem;
+    transform: rotate(-45deg);
+}
+.loader.circle2 span:nth-child(5) {
+    top: 50%;
+    right: 0;
+    margin-top: -.25rem;
+}
+.loader.circle2 span:nth-child(6) {
+    bottom: 1rem;
+    right: .5rem;
+    transform: rotate(45deg);
+}
+.loader.circle2 span:nth-child(7) {
+    bottom: .5rem;
+    left: 50%;
+    margin-left: -.75rem;
+    transform: rotate(90deg);
+}
+.loader.circle2 span:nth-child(8) {
+    bottom: 1rem;
+    left: .5rem;
+    transform: rotate(-45deg);
+}
+.loader.circle2 {
+    animation: circle2 2s linear infinite;
+}
+@keyframes circle2 {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*circle3*/
+.loader.circle3 span {
+    position: absolute;
+    width: .7rem;
+    height: .7rem;
+    border-radius: 50%;
+    background: #11b95c;
+    animation: circle1 1s ease infinite;
+}
+/*circle4*/
+.loader.circle4 span {
+    position: absolute;
+    width: .7rem;
+    height: .7rem;
+    border-radius: 50%;
+    background: #11b95c;
+    animation: circle3 1s ease infinite;
+}
+.loader.circle3 span:nth-child(1),
+.loader.circle4 span:nth-child(1) {
+    left: 0;
+    top: 50%;
+    margin-top: -.35rem;
+    animation-delay: .13s;
+}
+.loader.circle3 span:nth-child(2),
+.loader.circle4 span:nth-child(2){
+    left: .9rem;
+    top: .9rem;
+    animation-delay: .26s;
+}
+.loader.circle3 span:nth-child(3),
+.loader.circle4 span:nth-child(3){
+    left: 2.15rem;
+    top: 0;
+    animation-delay: .39s;
+}
+.loader.circle3 span:nth-child(4),
+.loader.circle4 span:nth-child(4){
+    right: .9rem;
+    top: .9rem;
+    animation-delay: .52s;
+}
+.loader.circle3 span:nth-child(5),
+.loader.circle4 span:nth-child(5){
+    right: 0;
+    top: 50%;
+    margin-top: -.35rem;
+    animation-delay: .65s;
+}
+.loader.circle3 span:nth-child(6),
+.loader.circle4 span:nth-child(6){
+    right: .9rem;
+    bottom: .9rem;
+    animation-delay: .78s;
+}
+.loader.circle3 span:nth-child(7),
+.loader.circle4 span:nth-child(7){
+    left: 2.15rem;
+    bottom: 0;
+    animation-delay: .91s;
+}
+.loader.circle3 span:nth-child(8),
+.loader.circle4 span:nth-child(8){
+    left: .9rem;
+    bottom: .9rem;
+    animation-delay: 1.04s;
+}
+
+
+@keyframes circle3 {
+    0% {
+        opacity: .25;
+        transform: scale(.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
