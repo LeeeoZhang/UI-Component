@@ -47,8 +47,13 @@ let tabContainer2 = document.querySelector('.tab2>.tab2-tabs')
 let tabs2 = document.querySelectorAll('.tab2>.tab2-tabs>li')
 let contents2 = document.querySelectorAll('.tab2>.tab2-content>li')
 
+let tabContainer3 = document.querySelector('.tab3>.tab3-tabs')
+let tabs3 = document.querySelectorAll('.tab3>.tab3-tabs>li')
+let contents3 = document.querySelectorAll('.tab3>.tab3-content>li')
+
 new Tab(tabContainer,tabs,contents,underline)
 new Tab(tabContainer2,tabs2,contents2)
+new Tab(tabContainer3,tabs3,contents3)
 
 
 
