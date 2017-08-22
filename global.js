@@ -56,6 +56,39 @@ new Tab(tabContainer2,tabs2,contents2)
 new Tab(tabContainer3,tabs3,contents3)
 
 
+//ripple
+!function() {
+    function animationEnd(element, handler) {
+        element.addEventListener('animationend', handler, false);
+        element.addEventListener('webkitAnimationEnd', handler, false);
+        element.addEventListener('mozAnimationEnd', handler, false);
+        element.addEventListener('OAnimationEnd', handler, false);
+    }
+
+    function ripple(event, _this) {
+        let x = event.pageX              //按钮距离文档顶部距离
+        let y = event.pageY              //按钮距离文档左边距离
+        let wx = _this.offsetWidth        //按钮的宽度
+        let rippleEle = document.createElement('span')
+        rippleEle.classList.add('ripple')
+        x = x - _this.offsetLeft - wx / 2   //波纹元素相对按钮的偏移量
+        y = y - _this.offsetTop - wx / 2
+        console.log(x, y)
+        _this.appendChild(rippleEle)
+        rippleEle.style.cssText = 'width: ' + wx + 'px;height: ' + wx + 'px;top: ' + y + 'px;left: ' + x + 'px'
+        rippleEle.classList.add('rippleEffect')
+        animationEnd(rippleEle,
+            function () {
+                this.parentNode.removeChild(rippleEle);        //动画结束删掉元素
+            });
+    }
+
+    let button = document.querySelector('.rippleCt>.ripplebtn')
+    button.addEventListener('click', function (e) {
+        ripple(e, this)
+    })
+}()
+
 
 
 
